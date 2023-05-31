@@ -15,7 +15,7 @@ function Player(){
         .then(dados => {
             setVideo(...dados)
         })
-    }, [])
+    }, [parametros])
 
     if(!video){
         return <NaoEncontrada />
