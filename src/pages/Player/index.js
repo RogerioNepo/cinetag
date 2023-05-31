@@ -7,10 +7,11 @@ import { useEffect, useState } from 'react';
 
 function Player(){
     const [video, setVideo] = useState();
-    const parametros = useParams();
+    
    
     
     useEffect(() => {
+        const parametros = useParams();
         fetch(`https://my-json-server.typicode.com/RogerioNepo/cinetag-minhaApi/videos?id=${parametros.id}`)
         .then(resposta => resposta.json())
         .then(dados => {
